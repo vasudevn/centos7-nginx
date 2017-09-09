@@ -1,5 +1,6 @@
 FROM centos:7
 MAINTAINER vasudevn "npadma09@gmail.com"
+RUN yum install epel-release -y
 RUN yum install nginx -y
 RUN systemctl enable nginx
 ADD nginx/nginx.conf /etc/nginx/nginx.conf
