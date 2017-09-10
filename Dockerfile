@@ -14,5 +14,6 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log
 RUN ln -sf /dev/stderr /var/log/nginx/error.log
 EXPOSE 80 443
 #systemctl restart nginx
-CMD ["nginx", "-g", "daemon off;"]
+#CMD ["nginx", "-g", "daemon off;"]
+CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
 
