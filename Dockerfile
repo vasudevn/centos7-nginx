@@ -5,7 +5,7 @@ RUN  yum clean all
 #RUN yum install nginx -y
 RUN rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 RUN yum install -y nginx --nogpgcheck
-RUN systemctl enable nginx
+#RUN systemctl enable nginx
 ADD nginx/nginx.conf /etc/nginx/nginx.conf
 ADD nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 ADD data/www /data/www
